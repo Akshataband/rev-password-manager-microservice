@@ -31,4 +31,9 @@ public class UserController {
 
         return new LoginResponse(token);
     }
+
+    @GetMapping("/profile")
+    public String profile() {
+        return "This is secured profile API";
+    }
 }
