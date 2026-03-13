@@ -6,15 +6,19 @@ import com.rev.user_service.entity.User;
 import com.rev.user_service.repository.UserRepository;
 import com.rev.user_service.security.JwtUtil;
 import lombok.RequiredArgsConstructor;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;
 @Service
 @RequiredArgsConstructor
 public class UserServiceImpl implements UserService {
-
+    @Autowired
     private final UserRepository userRepository;
+    @Autowired
     private final PasswordEncoder passwordEncoder;
+    @Autowired
     private final JwtUtil jwtUtil;
+
 
 
     @Override

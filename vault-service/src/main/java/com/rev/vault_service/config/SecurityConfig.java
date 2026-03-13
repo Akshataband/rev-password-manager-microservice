@@ -1,17 +1,12 @@
-package com.rev.user_service.config;
+package com.rev.vault_service.config;
 
-import com.rev.user_service.security.JwtAuthenticationFilter;
+import com.rev.vault_service.security.JwtAuthenticationFilter;
 import lombok.RequiredArgsConstructor;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
-
 import org.springframework.security.config.annotation.method.configuration.EnableMethodSecurity;
 import org.springframework.security.config.annotation.web.builders.HttpSecurity;
-
 import org.springframework.security.config.http.SessionCreationPolicy;
-import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
-import org.springframework.security.crypto.password.PasswordEncoder;
-
 import org.springframework.security.web.SecurityFilterChain;
 import org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter;
 
@@ -31,8 +26,6 @@ public class SecurityConfig {
 
                 .authorizeHttpRequests(auth -> auth
                         .requestMatchers(
-                                "/api/users/register",
-                                "/api/users/login",
                                 "/v3/api-docs/**",
                                 "/swagger-ui/**"
                         ).permitAll()
@@ -49,11 +42,5 @@ public class SecurityConfig {
                 );
 
         return http.build();
-    }
-
-    // PASSWORD ENCODER BEAN
-    @Bean
-    public PasswordEncoder passwordEncoder() {
-        return new BCryptPasswordEncoder();
     }
 }

@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="d5dd9a54-1664-4fe6-a76f-98e6f78528fa" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/vault-service/src/main/java/com/rev/vault_service/config/SecurityConfig.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vault-service/src/main/java/com/rev/vault_service/security/JwtAuthenticationFilter.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vault-service/src/main/java/com/rev/vault_service/security/JwtUtil.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api-gateway/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/api-gateway/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config-server/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/config-server/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config-server/src/main/java/com/rev/config_server/ConfigServerApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/config-server/src/main/java/com/rev/config_server/ConfigServerApplication.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config-server/src/test/java/com/rev/config_server/ConfigServerApplicationTests.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/eureka-server/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/eureka-server/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/password-service/.gitattributes" beforeDir="false" afterPath="$PROJECT_DIR$/vault-service/.gitattributes" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/password-service/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/vault-service/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/password-service/.mvn/wrapper/maven-wrapper.properties" beforeDir="false" afterPath="$PROJECT_DIR$/vault-service/.mvn/wrapper/maven-wrapper.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/password-service/mvnw" beforeDir="false" afterPath="$PROJECT_DIR$/vault-service/mvnw" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/password-service/mvnw.cmd" beforeDir="false" afterPath="$PROJECT_DIR$/vault-service/mvnw.cmd" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/password-service/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/vault-service/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/password-service/src/main/java/com/rev/password_service/PasswordServiceApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/vault-service/src/main/java/com/rev/vault_service/PasswordServiceApplication.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/password-service/src/main/java/com/rev/password_service/config/SecurityConfig.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/password-service/src/main/java/com/rev/password_service/config/SwaggerConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/vault-service/src/main/java/com/rev/vault_service/config/SwaggerConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/password-service/src/main/java/com/rev/password_service/controller/PasswordController.java" beforeDir="false" afterPath="$PROJECT_DIR$/vault-service/src/main/java/com/rev/vault_service/controller/PasswordController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/password-service/src/main/java/com/rev/password_service/dto/PasswordRequest.java" beforeDir="false" afterPath="$PROJECT_DIR$/vault-service/src/main/java/com/rev/vault_service/dto/PasswordRequest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/password-service/src/main/java/com/rev/password_service/dto/PasswordResponse.java" beforeDir="false" afterPath="$PROJECT_DIR$/vault-service/src/main/java/com/rev/vault_service/dto/PasswordResponse.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/password-service/src/main/java/com/rev/password_service/entity/Password.java" beforeDir="false" afterPath="$PROJECT_DIR$/vault-service/src/main/java/com/rev/vault_service/entity/Password.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/password-service/src/main/java/com/rev/password_service/exception/GlobalExceptionHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/vault-service/src/main/java/com/rev/vault_service/exception/GlobalExceptionHandler.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/password-service/src/main/java/com/rev/password_service/repository/PasswordRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/vault-service/src/main/java/com/rev/vault_service/repository/PasswordRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/password-service/src/main/java/com/rev/password_service/security/JwtAuthenticationFilter.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/password-service/src/main/java/com/rev/password_service/security/JwtUtil.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/password-service/src/main/java/com/rev/password_service/service/PasswordService.java" beforeDir="false" afterPath="$PROJECT_DIR$/vault-service/src/main/java/com/rev/vault_service/service/PasswordService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/password-service/src/main/java/com/rev/password_service/service/impl/PasswordServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/vault-service/src/main/java/com/rev/vault_service/service/impl/PasswordServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/password-service/src/main/java/com/rev/password_service/util/EncryptionUtil.java" beforeDir="false" afterPath="$PROJECT_DIR$/vault-service/src/main/java/com/rev/vault_service/util/EncryptionUtil.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/password-service/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/vault-service/src/main/resources/application.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/user-service/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/user-service/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/user-service/src/main/java/com/rev/user_service/config/SecurityConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/user-service/src/main/java/com/rev/user_service/config/SecurityConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/user-service/src/main/java/com/rev/user_service/service/UserServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/user-service/src/main/java/com/rev/user_service/service/UserServiceImpl.java" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="MavenRunner">
+    <option name="jreName" value="21" />
+  </component>
+  <component name="ProjectColorInfo"><![CDATA[{
+  "customColor": "",
+  "associatedIndex": 7
+}]]></component>
+  <component name="ProjectId" id="3AtkQ3ZGNUsokZBiVo51czDieq7" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "ModuleVcsDetector.initialDetectionPerformed": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252": "true",
+    "RunOnceActivity.git.unshallow": "true",
+    "Spring Boot.ApiGatewayApplication.executor": "Run",
+    "Spring Boot.ConfigServerApplication.executor": "Run",
+    "Spring Boot.EurekaServerApplication.executor": "Run",
+    "Spring Boot.PasswordServiceApplication.executor": "Run",
+    "Spring Boot.UserServiceApplication.executor": "Run",
+    "git-widget-placeholder": "main",
+    "kotlin-language-version-configured": "true",
+    "project.structure.last.edited": "Modules",
+    "project.structure.proportion": "0.0",
+    "project.structure.side.proportion": "0.0",
+    "settings.editor.selected.configurable": "reference.settings.project.maven.runner"
+  }
+}]]></component>
+  <component name="SharedIndexes">
+    <attachedChunks>
+      <set>
+        <option value="bundled-jdk-30f59d01ecdd-26cb7f24e5b0-intellij.indexing.shared.core-IU-253.29346.240" />
+      </set>
+    </attachedChunks>
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="d5dd9a54-1664-4fe6-a76f-98e6f78528fa" name="Changes" comment="" />
+      <created>1773419238278</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1773419238278</updated>
+    </task>
+    <servers />
+  </component>
+</project>
