@@ -1,16 +1,15 @@
 package com.rev.vault_service.security;
 
+import org.springframework.security.core.Authentication;
 import org.springframework.security.core.context.SecurityContextHolder;
 
 public class CurrentUserUtil {
 
     public static String getCurrentUserEmail() {
 
-        Object principal = SecurityContextHolder
-                .getContext()
-                .getAuthentication()
-                .getPrincipal();
+        Authentication authentication =
+                SecurityContextHolder.getContext().getAuthentication();
 
-        return principal.toString();
+        return authentication.getName();
     }
 }

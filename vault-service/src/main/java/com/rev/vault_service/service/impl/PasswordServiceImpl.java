@@ -1,11 +1,12 @@
-package com.rev.vault_service.service.impl;
+package com.rev.vault_service.service;
 
 import com.rev.vault_service.dto.PasswordRequest;
 import com.rev.vault_service.dto.PasswordResponse;
 import com.rev.vault_service.entity.Password;
 import com.rev.vault_service.repository.PasswordRepository;
 import com.rev.vault_service.security.CurrentUserUtil;
-import com.rev.vault_service.service.PasswordService;
+import com.rev.vault_service.util.EncryptionUtil;
+
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 
@@ -18,17 +19,20 @@ import java.util.stream.Collectors;
 public class PasswordServiceImpl implements PasswordService {
 
     private final PasswordRepository passwordRepository;
+    private final EncryptionUtil encryptionUtil;
 
     @Override
     public PasswordResponse savePassword(PasswordRequest request) {
 
         String email = CurrentUserUtil.getCurrentUserEmail();
 
+        String encryptedPassword = encryptionUtil.encrypt(request.getPassword());
+
         Password password = Password.builder()
                 .userEmail(email)
                 .siteName(request.getSiteName())
                 .username(request.getUsername())
-                .encryptedPassword(request.getPassword())
+                .encryptedPassword(encryptedPassword)
                 .createdAt(LocalDateTime.now())
                 .updatedAt(LocalDateTime.now())
                 .build();
@@ -76,9 +80,11 @@ public class PasswordServiceImpl implements PasswordService {
             throw new RuntimeException("Unauthorized access");
         }
 
+        String encryptedPassword = encryptionUtil.encrypt(request.getPassword());
+
         password.setSiteName(request.getSiteName());
         password.setUsername(request.getUsername());
-        password.setEncryptedPassword(request.getPassword());
+        password.setEncryptedPassword(encryptedPassword);
         password.setUpdatedAt(LocalDateTime.now());
 
         Password updated = passwordRepository.save(password);
@@ -103,11 +109,13 @@ public class PasswordServiceImpl implements PasswordService {
 
     private PasswordResponse mapToResponse(Password password) {
 
+        String decryptedPassword = encryptionUtil.decrypt(password.getEncryptedPassword());
+
         return PasswordResponse.builder()
                 .id(password.getId())
                 .siteName(password.getSiteName())
                 .username(password.getUsername())
-                .password(password.getEncryptedPassword())
+                .password(decryptedPassword)
                 .build();
     }
 }
