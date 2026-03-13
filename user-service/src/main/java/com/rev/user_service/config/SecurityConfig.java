@@ -1,6 +1,5 @@
 package com.rev.user_service.config;
 
-import com.rev.user_service.security.JwtAuthenticationFilter;
 import lombok.RequiredArgsConstructor;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;

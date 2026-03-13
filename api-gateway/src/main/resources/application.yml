@@ -5,15 +5,27 @@ spring:
   application:
     name: api-gateway
 
-    datasource:
-      url: jdbc:mysql://localhost:3306/user_db
-      username: appuser
-      password: Akshata@0911
-
   config:
     import: optional:configserver:http://localhost:8888
+
+  cloud:
+    gateway:
+      routes:
+
+        - id: user-service
+          uri: lb://USER-SERVICE
+          predicates:
+            - Path=/api/users/**
+
+        - id: vault-service
+          uri: lb://VAULT-SERVICE
+          predicates:
+            - Path=/api/passwords/**
 
 eureka:
   client:
     service-url:
       defaultZone: http://localhost:8761/eureka
+
+jwt:
+  secret: mysupersecretkeymysupersecretkey123456

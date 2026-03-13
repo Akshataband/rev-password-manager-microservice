@@ -5,38 +5,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="d5dd9a54-1664-4fe6-a76f-98e6f78528fa" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/vault-service/src/main/java/com/rev/vault_service/config/SecurityConfig.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/vault-service/src/main/java/com/rev/vault_service/security/JwtAuthenticationFilter.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/vault-service/src/main/java/com/rev/vault_service/security/JwtUtil.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/api-gateway/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/api-gateway/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config-server/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/config-server/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config-server/src/main/java/com/rev/config_server/ConfigServerApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/config-server/src/main/java/com/rev/config_server/ConfigServerApplication.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config-server/src/test/java/com/rev/config_server/ConfigServerApplicationTests.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/eureka-server/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/eureka-server/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/password-service/.gitattributes" beforeDir="false" afterPath="$PROJECT_DIR$/vault-service/.gitattributes" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/password-service/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/vault-service/.gitignore" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/password-service/.mvn/wrapper/maven-wrapper.properties" beforeDir="false" afterPath="$PROJECT_DIR$/vault-service/.mvn/wrapper/maven-wrapper.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/password-service/mvnw" beforeDir="false" afterPath="$PROJECT_DIR$/vault-service/mvnw" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/password-service/mvnw.cmd" beforeDir="false" afterPath="$PROJECT_DIR$/vault-service/mvnw.cmd" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/password-service/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/vault-service/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/password-service/src/main/java/com/rev/password_service/PasswordServiceApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/vault-service/src/main/java/com/rev/vault_service/PasswordServiceApplication.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/password-service/src/main/java/com/rev/password_service/config/SecurityConfig.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/password-service/src/main/java/com/rev/password_service/config/SwaggerConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/vault-service/src/main/java/com/rev/vault_service/config/SwaggerConfig.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/password-service/src/main/java/com/rev/password_service/controller/PasswordController.java" beforeDir="false" afterPath="$PROJECT_DIR$/vault-service/src/main/java/com/rev/vault_service/controller/PasswordController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/password-service/src/main/java/com/rev/password_service/dto/PasswordRequest.java" beforeDir="false" afterPath="$PROJECT_DIR$/vault-service/src/main/java/com/rev/vault_service/dto/PasswordRequest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/password-service/src/main/java/com/rev/password_service/dto/PasswordResponse.java" beforeDir="false" afterPath="$PROJECT_DIR$/vault-service/src/main/java/com/rev/vault_service/dto/PasswordResponse.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/password-service/src/main/java/com/rev/password_service/entity/Password.java" beforeDir="false" afterPath="$PROJECT_DIR$/vault-service/src/main/java/com/rev/vault_service/entity/Password.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/password-service/src/main/java/com/rev/password_service/exception/GlobalExceptionHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/vault-service/src/main/java/com/rev/vault_service/exception/GlobalExceptionHandler.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/password-service/src/main/java/com/rev/password_service/repository/PasswordRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/vault-service/src/main/java/com/rev/vault_service/repository/PasswordRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/password-service/src/main/java/com/rev/password_service/security/JwtAuthenticationFilter.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/password-service/src/main/java/com/rev/password_service/security/JwtUtil.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/password-service/src/main/java/com/rev/password_service/service/PasswordService.java" beforeDir="false" afterPath="$PROJECT_DIR$/vault-service/src/main/java/com/rev/vault_service/service/PasswordService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/password-service/src/main/java/com/rev/password_service/service/impl/PasswordServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/vault-service/src/main/java/com/rev/vault_service/service/impl/PasswordServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/password-service/src/main/java/com/rev/password_service/util/EncryptionUtil.java" beforeDir="false" afterPath="$PROJECT_DIR$/vault-service/src/main/java/com/rev/vault_service/util/EncryptionUtil.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/password-service/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/vault-service/src/main/resources/application.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/user-service/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/user-service/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/user-service/src/main/java/com/rev/user_service/config/SecurityConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/user-service/src/main/java/com/rev/user_service/config/SecurityConfig.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/user-service/src/main/java/com/rev/user_service/service/UserServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/user-service/src/main/java/com/rev/user_service/service/UserServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api-gateway/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/api-gateway/src/main/resources/application.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vault-service/src/main/java/com/rev/vault_service/config/SecurityConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/vault-service/src/main/java/com/rev/vault_service/config/SecurityConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vault-service/src/main/java/com/rev/vault_service/security/JwtAuthenticationFilter.java" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />

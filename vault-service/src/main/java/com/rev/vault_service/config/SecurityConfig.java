@@ -1,6 +1,5 @@
 package com.rev.vault_service.config;
 
-import com.rev.vault_service.security.JwtAuthenticationFilter;
 import lombok.RequiredArgsConstructor;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
