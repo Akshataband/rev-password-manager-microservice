@@ -5,9 +5,6 @@ spring:
   application:
     name: api-gateway
 
-  config:
-    import: optional:configserver:http://localhost:8888
-
   cloud:
     gateway:
       routes:
@@ -17,10 +14,33 @@ spring:
           predicates:
             - Path=/api/users/**
 
-        - id: vault-service
-          uri: lb://VAULT-SERVICE
+        - id: password-service
+          uri: lb://PASSWORD-SERVICE
           predicates:
             - Path=/api/passwords/**
+
+        - id: user-service-docs
+          uri: lb://USER-SERVICE
+          predicates:
+            - Path=/user-service/v3/api-docs
+          filters:
+            - RewritePath=/user-service/(?<segment>.*), /${segment}
+
+        - id: password-service-docs
+          uri: lb://PASSWORD-SERVICE
+          predicates:
+            - Path=/password-service/v3/api-docs
+          filters:
+            - RewritePath=/password-service/(?<segment>.*), /${segment}
+
+springdoc:
+  swagger-ui:
+    path: /swagger-ui.html
+    urls:
+      - name: user-service
+        url: /user-service/v3/api-docs
+      - name: password-service
+        url: /password-service/v3/api-docs
 
 eureka:
   client:
