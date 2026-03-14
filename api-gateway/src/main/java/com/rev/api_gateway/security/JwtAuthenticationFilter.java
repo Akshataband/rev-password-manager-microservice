@@ -29,7 +29,10 @@ public class JwtAuthenticationFilter implements GlobalFilter {
                         path.startsWith("/swagger-ui.html") ||
                         path.startsWith("/webjars") ||
                         path.startsWith("/user-service/v3/api-docs") ||
-                        path.startsWith("/password-service/v3/api-docs")
+                        path.startsWith("/password-service/v3/api-docs") ||
+                        path.startsWith("/generator-service/v3/api-docs") ||
+                        path.startsWith("/security-service/v3/api-docs") ||
+                        path.startsWith("/notification-service/v3/api-docs")
         ) {
             return chain.filter(exchange);
         }

@@ -10,13 +10,15 @@ import java.util.Optional;
 @Repository
 public interface PasswordRepository extends JpaRepository<Password, Long> {
 
-    List<Password> findByUserEmail(String email);
+    List<Password> findByUserEmail(String userEmail);
 
-    List<Password> findByUserEmailAndFavoriteTrue(String email);
+    List<Password> findByUserEmailAndFavoriteTrue(String userEmail);
 
-    List<Password> findByUserEmailAndSiteNameContainingIgnoreCase(String email,String keyword);
+    List<Password> findByUserEmailAndSiteNameContainingIgnoreCase(String userEmail, String keyword);
 
-    List<Password> findByUserEmailAndCategory(String email,String category);
+    List<Password> findByUserEmailAndCategory(String userEmail, String category);
 
-    Optional<Password> findTopByUserEmailOrderByCreatedAtDesc(String email);
+    Optional<Password> findTopByUserEmailOrderByCreatedAtDesc(String userEmail);
+
+    boolean existsByUserEmailAndEncryptedPassword(String userEmail, String encryptedPassword);
 }
