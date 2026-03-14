@@ -22,16 +22,16 @@ spring:
         - id: user-service-docs
           uri: lb://USER-SERVICE
           predicates:
-            - Path=/user-service/v3/api-docs
+            - Path=/user-service/v3/api-docs/**
           filters:
-            - RewritePath=/user-service/(?<segment>.*), /${segment}
+            - RewritePath=/user-service/(?<segment>.*), /$\{segment}
 
         - id: password-service-docs
           uri: lb://PASSWORD-SERVICE
           predicates:
-            - Path=/password-service/v3/api-docs
+            - Path=/password-service/v3/api-docs/**
           filters:
-            - RewritePath=/password-service/(?<segment>.*), /${segment}
+            - RewritePath=/password-service/(?<segment>.*), /$\{segment}
 
 springdoc:
   swagger-ui:
@@ -48,4 +48,4 @@ eureka:
       defaultZone: http://localhost:8761/eureka
 
 jwt:
-  secret: mysupersecretkeymysupersecretkey123456
+  secret: rev_password_manager_super_secure_jwt_secret_key_2026

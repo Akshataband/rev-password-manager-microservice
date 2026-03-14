@@ -5,6 +5,9 @@ spring:
   application:
     name: user-service
 
+  config:
+    import: optional:configserver:http://localhost:8888
+
   datasource:
     url: jdbc:mysql://localhost:3306/user_db
     username: root
@@ -21,7 +24,7 @@ spring:
 
   cloud:
     config:
-      enabled: false
+      enabled: true
 
 eureka:
   client:
@@ -32,3 +35,9 @@ eureka:
 
 jwt:
   secret: mysupersecretkeymysupersecretkey123456
+
+springdoc:
+  api-docs:
+    path: /v3/api-docs
+  swagger-ui:
+    path: /swagger-ui.html

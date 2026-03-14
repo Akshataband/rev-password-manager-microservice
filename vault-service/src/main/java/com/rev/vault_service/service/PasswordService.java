@@ -16,4 +16,12 @@ public interface PasswordService {
     PasswordResponse updatePassword(Long id, PasswordRequest request);
 
     void deletePassword(Long id);
+
+    List<PasswordResponse> getFavorites();
+
+    List<PasswordResponse> search(String keyword);
+
+    List<PasswordResponse> filterByCategory(String category);
+
+    PasswordResponse getLast();
 }

@@ -1,5 +1,10 @@
 package com.rev.api_gateway.config;
 
+import io.swagger.v3.oas.models.Components;
+import io.swagger.v3.oas.models.OpenAPI;
+import io.swagger.v3.oas.models.security.SecurityRequirement;   // ✅ correct
+import io.swagger.v3.oas.models.security.SecurityScheme;
+
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springdoc.core.models.GroupedOpenApi;
@@ -21,5 +26,18 @@ public class SwaggerConfig {
                 .group("password-service")
                 .pathsToMatch("/api/passwords/**")
                 .build();
+    }
+
+    @Bean
+    public OpenAPI gatewayOpenAPI() {
+
+        return new OpenAPI()
+                .components(new Components()
+                        .addSecuritySchemes("BearerAuth",
+                                new SecurityScheme()
+                                        .type(SecurityScheme.Type.HTTP)
+                                        .scheme("bearer")
+                                        .bearerFormat("JWT")))
+                .addSecurityItem(new SecurityRequirement().addList("BearerAuth"));
     }
 }

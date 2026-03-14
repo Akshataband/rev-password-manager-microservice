@@ -9,7 +9,7 @@ import java.util.Base64;
 @Component
 public class EncryptionUtil {
 
-    private static final String SECRET_KEY = "1234567890123456"; // 16 characters for AES
+    private static final String SECRET_KEY = "1234567890123456";
 
     // Encrypt password
     public String encrypt(String data) {

@@ -18,15 +18,22 @@ public class Password {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
-    // Instead of userId we store userEmail from JWT
     @Column(nullable = false)
     private String userEmail;
 
     private String siteName;
 
+    private String siteUrl;
+
     private String username;
 
     private String encryptedPassword;
+
+    private String category;
+
+    private String notes;
+
+    private boolean favorite;
 
     private LocalDateTime createdAt;
 

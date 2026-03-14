@@ -1,15 +1,23 @@
 package com.rev.vault_service.security;
 
-import org.springframework.security.core.Authentication;
-import org.springframework.security.core.context.SecurityContextHolder;
+import jakarta.servlet.http.HttpServletRequest;
+import lombok.RequiredArgsConstructor;
+import org.springframework.stereotype.Component;
 
+@Component
+@RequiredArgsConstructor
 public class CurrentUserUtil {
 
-    public static String getCurrentUserEmail() {
+    private final HttpServletRequest request;
 
-        Authentication authentication =
-                SecurityContextHolder.getContext().getAuthentication();
+    public String getCurrentUserEmail() {
 
-        return authentication.getName();
+        String email = request.getHeader("X-User-Email");
+
+        if (email == null || email.isBlank()) {
+            throw new RuntimeException("X-User-Email header missing");
+        }
+
+        return email;
     }
 }
