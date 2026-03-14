@@ -20,12 +20,12 @@ public class UserController {
         return "User registered successfully";
     }
 
-    // LOGIN
-    @PostMapping("/login")
-    public LoginResponse login(@RequestBody LoginRequest request) {
-
-        return userService.loginUser(request);
-    }
+//    // LOGIN
+//    @PostMapping("/login")
+//    public LoginResponse login(@RequestBody LoginRequest request) {
+//
+//        return userService.loginUser(request);
+//    }
 
     // LOGOUT
     @PostMapping("/logout")

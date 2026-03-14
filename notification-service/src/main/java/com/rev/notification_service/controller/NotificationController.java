@@ -2,6 +2,7 @@ package com.rev.notification_service.controller;
 
 
 import com.rev.notification_service.dto.NotificationRequest;
+import com.rev.notification_service.dto.OtpNotificationRequest;
 import com.rev.notification_service.dto.SecurityAlertRequest;
 import com.rev.notification_service.entity.Notification;
 import com.rev.notification_service.service.NotificationService;
@@ -17,6 +18,11 @@ public class NotificationController {
 
     private final NotificationService notificationService;
 
+
+    @PostMapping("/send-otp")
+    public void sendOtp(@RequestBody OtpNotificationRequest request) {
+        notificationService.sendOtp(request);
+    }
     @GetMapping
     public List<Notification> getNotifications(
             @RequestParam String username) {

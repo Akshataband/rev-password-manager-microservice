@@ -1,5 +1,8 @@
 package com.rev.vault_service.util;
 
+import org.springframework.stereotype.Component;
+
+@Component
 public class PasswordStrengthUtil {
 
     public static boolean isWeak(String password) {

@@ -34,7 +34,9 @@ spring:
           predicates:
             - Path=/api/notifications/**
 
+
         # Swagger Docs Routes
+
         - id: user-service-docs
           uri: lb://USER-SERVICE
           predicates:
@@ -69,6 +71,8 @@ spring:
             - Path=/notification-service/v3/api-docs/**
           filters:
             - RewritePath=/notification-service/(?<segment>.*), /${segment}
+
+
 springdoc:
   swagger-ui:
     path: /swagger-ui.html
@@ -84,10 +88,12 @@ springdoc:
       - name: notification-service
         url: /notification-service/v3/api-docs
 
+
 eureka:
   client:
     service-url:
       defaultZone: http://localhost:8761/eureka
+
 
 jwt:
   secret: rev_password_manager_super_secure_jwt_secret_key_2026
