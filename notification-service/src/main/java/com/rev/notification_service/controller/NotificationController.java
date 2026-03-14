@@ -3,6 +3,7 @@ package com.rev.notification_service.controller;
 
 import com.rev.notification_service.dto.NotificationRequest;
 import com.rev.notification_service.dto.OtpNotificationRequest;
+import com.rev.notification_service.dto.PasswordExpiryRequest;
 import com.rev.notification_service.dto.SecurityAlertRequest;
 import com.rev.notification_service.entity.Notification;
 import com.rev.notification_service.service.NotificationService;
@@ -58,5 +59,12 @@ public class NotificationController {
 
         notificationService.deleteNotification(id);
         return "Deleted";
+    }
+    @PostMapping("/password-expiry")
+    public String passwordExpiry(
+            @RequestBody PasswordExpiryRequest request) {
+
+        notificationService.sendPasswordExpiryAlert(request);
+        return "Password expiry alert sent";
     }
 }

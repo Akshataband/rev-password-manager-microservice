@@ -5,18 +5,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="d5dd9a54-1664-4fe6-a76f-98e6f78528fa" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/api-gateway/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/api-gateway/src/main/resources/application.yml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/notification-service/src/main/java/com/rev/notification_service/controller/NotificationController.java" beforeDir="false" afterPath="$PROJECT_DIR$/notification-service/src/main/java/com/rev/notification_service/controller/NotificationController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/notification-service/src/main/java/com/rev/notification_service/service/NotificationService.java" beforeDir="false" afterPath="$PROJECT_DIR$/notification-service/src/main/java/com/rev/notification_service/service/NotificationService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/notification-service/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/notification-service/src/main/resources/application.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/user-service/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/user-service/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/user-service/src/main/java/com/rev/user_service/UserServiceApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/user-service/src/main/java/com/rev/user_service/UserServiceApplication.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/user-service/src/main/java/com/rev/user_service/config/SecurityConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/user-service/src/main/java/com/rev/user_service/config/SecurityConfig.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/user-service/src/main/java/com/rev/user_service/controller/UserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/user-service/src/main/java/com/rev/user_service/controller/UserController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/user-service/src/main/java/com/rev/user_service/security/JwtAuthFilter.java" beforeDir="false" afterPath="$PROJECT_DIR$/user-service/src/main/java/com/rev/user_service/security/JwtAuthFilter.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vault-service/src/main/java/com/rev/vault_service/util/PasswordStrengthUtil.java" beforeDir="false" afterPath="$PROJECT_DIR$/vault-service/src/main/java/com/rev/vault_service/util/PasswordStrengthUtil.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vault-service/src/main/java/com/rev/vault_service/PasswordServiceApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/vault-service/src/main/java/com/rev/vault_service/PasswordServiceApplication.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vault-service/src/main/java/com/rev/vault_service/client/NotificationClient.java" beforeDir="false" afterPath="$PROJECT_DIR$/vault-service/src/main/java/com/rev/vault_service/client/NotificationClient.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />

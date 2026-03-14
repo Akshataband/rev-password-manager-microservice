@@ -3,10 +3,12 @@ package com.rev.notification_service.service;
 import com.rev.notification_service.dto.NotificationRequest;
 import com.rev.notification_service.dto.OtpNotificationRequest;
 import com.rev.notification_service.dto.SecurityAlertRequest;
+import com.rev.notification_service.dto.PasswordExpiryRequest;   // ⭐ ADD THIS
 import com.rev.notification_service.entity.Notification;
 import com.rev.notification_service.repository.NotificationRepository;
+
 import lombok.RequiredArgsConstructor;
-import lombok.extern.slf4j.Slf4j;
+
 import org.springframework.mail.SimpleMailMessage;
 import org.springframework.mail.javamail.JavaMailSender;
 import org.springframework.stereotype.Service;
@@ -20,6 +22,7 @@ public class NotificationService {
 
     private final NotificationRepository repo;
     private final JavaMailSender mailSender;
+
     public void sendNotification(NotificationRequest request) {
 
         Notification notification = new Notification();
@@ -61,9 +64,9 @@ public class NotificationService {
     }
 
     public void deleteNotification(Long id) {
-
         repo.deleteById(id);
     }
+
     public void sendOtp(OtpNotificationRequest request) {
 
         SimpleMailMessage message = new SimpleMailMessage();
@@ -73,6 +76,36 @@ public class NotificationService {
         message.setText("Your OTP is: " + request.getOtp() + "\nValid for 5 minutes.");
 
         mailSender.send(message);
+    }
 
+    // ⭐ Password expiry alert
+    public void sendPasswordExpiryAlert(PasswordExpiryRequest request) {
+
+        Notification notification = new Notification();
+
+        notification.setUsername(request.getEmail());
+        notification.setMessage(
+                "Your password for " + request.getSiteName() +
+                        " is older than 90 days. Please update it."
+        );
+
+        notification.setType("PASSWORD_EXPIRY");
+        notification.setCreatedAt(LocalDateTime.now());
+        notification.setReadStatus(false);
+
+        repo.save(notification);
+
+        SimpleMailMessage message = new SimpleMailMessage();
+
+        message.setTo(request.getEmail());
+        message.setSubject("Password Expiry Warning");
+
+        message.setText(
+                "Your password for site " +
+                        request.getSiteName() +
+                        " is older than 90 days.\n\nPlease update it for better security."
+        );
+
+        mailSender.send(message);
     }
 }
