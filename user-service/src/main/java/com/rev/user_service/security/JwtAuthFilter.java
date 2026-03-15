@@ -25,13 +25,19 @@ public class JwtAuthFilter extends OncePerRequestFilter {
     @Override
     protected boolean shouldNotFilter(HttpServletRequest request) {
 
-        String path = request.getServletPath();
+        String path = request.getRequestURI();
 
-        return path.equals("/api/users/login") ||
-                path.equals("/api/users/register") ||
-                path.equals("/api/users/verify-otp") ||
-                path.startsWith("/swagger-ui") ||
-                path.startsWith("/v3/api-docs");
+        // Skip authentication for public endpoints
+        if (path.contains("/api/users/login")) return true;
+        if (path.contains("/api/users/register")) return true;
+        if (path.contains("/api/users/verify-otp")) return true;
+        if (path.contains("/api/users/forgot-password")) return true;
+        if (path.contains("/api/users/reset-password")) return true;
+
+        if (path.contains("/swagger-ui")) return true;
+        if (path.contains("/v3/api-docs")) return true;
+
+        return false;
     }
 
     @Override
@@ -40,6 +46,19 @@ public class JwtAuthFilter extends OncePerRequestFilter {
             HttpServletResponse response,
             FilterChain filterChain
     ) throws ServletException, IOException {
+
+        String path = request.getRequestURI();
+
+        // SKIP AUTHENTICATION FOR PUBLIC ENDPOINTS
+        if (path.contains("/api/users/login") ||
+                path.contains("/api/users/register") ||
+                path.contains("/api/users/verify-otp") ||
+                path.contains("/api/users/forgot-password") ||
+                path.contains("/api/users/reset-password")) {
+
+            filterChain.doFilter(request, response);
+            return;
+        }
 
         String authHeader = request.getHeader("Authorization");
 

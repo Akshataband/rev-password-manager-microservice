@@ -9,6 +9,8 @@ import lombok.RequiredArgsConstructor;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
+import java.util.Map;
+
 @RestController
 @RequestMapping("/api/users")
 @RequiredArgsConstructor
@@ -18,8 +20,15 @@ public class AuthController {
 
     @PostMapping("/login")
     public ResponseEntity<?> login(@RequestBody LoginRequest request) {
+
         authService.login(request);
-        return ResponseEntity.ok("OTP sent to email");
+
+        return ResponseEntity.ok(
+                Map.of(
+                        "otpRequired", true,
+                        "message", "OTP sent to email"
+                )
+        );
     }
 
     @PostMapping("/verify-otp")

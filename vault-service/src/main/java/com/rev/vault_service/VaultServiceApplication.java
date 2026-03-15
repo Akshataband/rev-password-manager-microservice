@@ -8,8 +8,8 @@ import org.springframework.scheduling.annotation.EnableScheduling;
 @EnableFeignClients
 @EnableScheduling
 @SpringBootApplication
-public class PasswordServiceApplication {
+public class VaultServiceApplication {
 	public static void main(String[] args) {
-		SpringApplication.run(PasswordServiceApplication.class, args);
+		SpringApplication.run(VaultServiceApplication.class, args);
 	}
 }

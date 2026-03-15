@@ -4,6 +4,7 @@ import com.rev.user_service.security.JwtAuthFilter;
 import lombok.RequiredArgsConstructor;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
+import org.springframework.http.HttpMethod;
 
 import org.springframework.security.config.annotation.method.configuration.EnableMethodSecurity;
 import org.springframework.security.config.annotation.web.builders.HttpSecurity;
@@ -15,11 +16,6 @@ import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.security.web.SecurityFilterChain;
 import org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter;
 
-import org.springframework.web.cors.CorsConfiguration;
-import org.springframework.web.cors.CorsConfigurationSource;
-import org.springframework.web.cors.UrlBasedCorsConfigurationSource;
-
-import java.util.List;
 
 @RequiredArgsConstructor
 @Configuration
@@ -33,16 +29,22 @@ public class SecurityConfig {
 
         http
                 .csrf(csrf -> csrf.disable())
-                .cors(cors -> cors.configurationSource(corsConfigurationSource()))
 
                 .authorizeHttpRequests(auth -> auth
-                        .requestMatchers(
+
+                        // allow CORS preflight
+                        .requestMatchers(HttpMethod.OPTIONS, "/**").permitAll()
+
+                        .requestMatchers(HttpMethod.POST,
                                 "/api/users/register",
                                 "/api/users/login",
                                 "/api/users/verify-otp",
                                 "/api/users/refresh-token",
                                 "/api/users/forgot-password",
-                                "/api/users/reset-password",
+                                "/api/users/reset-password"
+                        ).permitAll()
+
+                        .requestMatchers(
                                 "/v3/api-docs/**",
                                 "/swagger-ui/**",
                                 "/swagger-ui.html"
@@ -64,32 +66,34 @@ public class SecurityConfig {
         return new BCryptPasswordEncoder();
     }
 
-    @Bean
-    public CorsConfigurationSource corsConfigurationSource() {
-
-        CorsConfiguration config = new CorsConfiguration();
-
-        config.setAllowedOrigins(List.of(
-                "http://localhost:8080",
-                "http://localhost:3000"
-        ));
-
-        config.setAllowedMethods(List.of(
-                "GET",
-                "POST",
-                "PUT",
-                "DELETE",
-                "OPTIONS"
-        ));
-
-        config.setAllowedHeaders(List.of("*"));
-        config.setAllowCredentials(true);
-
-        UrlBasedCorsConfigurationSource source =
-                new UrlBasedCorsConfigurationSource();
-
-        source.registerCorsConfiguration("/**", config);
-
-        return source;
-    }
+//    @Bean
+//    public CorsConfigurationSource corsConfigurationSource() {
+//
+//        CorsConfiguration config = new CorsConfiguration();
+//
+//        config.setAllowedOrigins(List.of(
+//                "http://localhost:4200",
+//                "http://localhost:8080",
+//                "http://localhost:3000"
+//        ));
+//
+//        config.setAllowedMethods(List.of(
+//                "GET",
+//                "POST",
+//                "PUT",
+//                "DELETE",
+//                "OPTIONS"
+//        ));
+//        config.setAllowedMethods(List.of("*"));
+//
+//        config.setAllowedHeaders(List.of("*"));
+//        config.setAllowCredentials(true);
+//
+//        UrlBasedCorsConfigurationSource source =
+//                new UrlBasedCorsConfigurationSource();
+//
+//        source.registerCorsConfiguration("/**", config);
+//
+//        return source;
+//    }
 }

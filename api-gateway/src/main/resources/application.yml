@@ -7,15 +7,30 @@ spring:
 
   cloud:
     gateway:
-      routes:
+      globalcors:
+        add-to-simple-url-handler-mapping: true
+        corsConfigurations:
+          '[/**]':
+            allowedOrigins:
+              - "http://localhost:4200"
+            allowedMethods:
+              - GET
+              - POST
+              - PUT
+              - DELETE
+              - OPTIONS
+            allowedHeaders:
+              - "*"
+            allowCredentials: true
 
+      routes:
         - id: user-service
           uri: lb://USER-SERVICE
           predicates:
             - Path=/api/users/**
 
-        - id: password-service
-          uri: lb://PASSWORD-SERVICE
+        - id: vault-service
+          uri: lb://VAULT-SERVICE
           predicates:
             - Path=/api/passwords/**
 
@@ -34,61 +49,6 @@ spring:
           predicates:
             - Path=/api/notifications/**
 
-
-        # Swagger Docs Routes
-
-        - id: user-service-docs
-          uri: lb://USER-SERVICE
-          predicates:
-            - Path=/user-service/v3/api-docs/**
-          filters:
-            - RewritePath=/user-service/(?<segment>.*), /${segment}
-
-        - id: password-service-docs
-          uri: lb://PASSWORD-SERVICE
-          predicates:
-            - Path=/password-service/v3/api-docs/**
-          filters:
-            - RewritePath=/password-service/(?<segment>.*), /${segment}
-
-        - id: generator-service-docs
-          uri: lb://GENERATOR-SERVICE
-          predicates:
-            - Path=/generator-service/v3/api-docs/**
-          filters:
-            - RewritePath=/generator-service/(?<segment>.*), /${segment}
-
-        - id: security-service-docs
-          uri: lb://SECURITY-SERVICE
-          predicates:
-            - Path=/security-service/v3/api-docs/**
-          filters:
-            - RewritePath=/security-service/(?<segment>.*), /${segment}
-
-        - id: notification-service-docs
-          uri: lb://NOTIFICATION-SERVICE
-          predicates:
-            - Path=/notification-service/v3/api-docs/**
-          filters:
-            - RewritePath=/notification-service/(?<segment>.*), /${segment}
-
-
-springdoc:
-  swagger-ui:
-    path: /swagger-ui.html
-    urls:
-      - name: user-service
-        url: /user-service/v3/api-docs
-      - name: password-service
-        url: /password-service/v3/api-docs
-      - name: generator-service
-        url: /generator-service/v3/api-docs
-      - name: security-service
-        url: /security-service/v3/api-docs
-      - name: notification-service
-        url: /notification-service/v3/api-docs
-
-
 eureka:
   client:
     service-url:
@@ -96,4 +56,4 @@ eureka:
 
 
 jwt:
-  secret: rev_password_manager_super_secure_jwt_secret_key_2026
+  secret: mysupersecretkeymysupersecretkey123456

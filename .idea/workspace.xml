@@ -5,11 +5,17 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="d5dd9a54-1664-4fe6-a76f-98e6f78528fa" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/notification-service/src/main/java/com/rev/notification_service/controller/NotificationController.java" beforeDir="false" afterPath="$PROJECT_DIR$/notification-service/src/main/java/com/rev/notification_service/controller/NotificationController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/notification-service/src/main/java/com/rev/notification_service/service/NotificationService.java" beforeDir="false" afterPath="$PROJECT_DIR$/notification-service/src/main/java/com/rev/notification_service/service/NotificationService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vault-service/src/main/java/com/rev/vault_service/PasswordServiceApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/vault-service/src/main/java/com/rev/vault_service/PasswordServiceApplication.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api-gateway/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/api-gateway/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api-gateway/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/api-gateway/src/main/resources/application.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/user-service/src/main/java/com/rev/user_service/config/SecurityConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/user-service/src/main/java/com/rev/user_service/config/SecurityConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/user-service/src/main/java/com/rev/user_service/controller/AuthController.java" beforeDir="false" afterPath="$PROJECT_DIR$/user-service/src/main/java/com/rev/user_service/controller/AuthController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/user-service/src/main/java/com/rev/user_service/security/JwtAuthFilter.java" beforeDir="false" afterPath="$PROJECT_DIR$/user-service/src/main/java/com/rev/user_service/security/JwtAuthFilter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vault-service/src/main/java/com/rev/vault_service/PasswordServiceApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/vault-service/src/main/java/com/rev/vault_service/VaultServiceApplication.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/vault-service/src/main/java/com/rev/vault_service/client/NotificationClient.java" beforeDir="false" afterPath="$PROJECT_DIR$/vault-service/src/main/java/com/rev/vault_service/client/NotificationClient.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vault-service/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/vault-service/src/main/resources/application.yml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -64,14 +70,30 @@
     "Spring Boot.PasswordServiceApplication.executor": "Run",
     "Spring Boot.SecurityServiceApplication.executor": "Run",
     "Spring Boot.UserServiceApplication.executor": "Run",
+    "Spring Boot.VaultServiceApplication.executor": "Run",
     "git-widget-placeholder": "main",
+    "ignore.virus.scanning.warn.message": "true",
     "kotlin-language-version-configured": "true",
+    "last_opened_file_path": "C:/Users/HP/OneDrive/Desktop/RevPasswordManager-Microservices/RevPasswordManager-backend",
     "project.structure.last.edited": "Modules",
     "project.structure.proportion": "0.15",
     "project.structure.side.proportion": "0.2",
     "settings.editor.selected.configurable": "reference.projectsettings.compiler.javacompiler"
   }
 }]]></component>
+  <component name="RunManager">
+    <configuration default="true" type="JetRunConfigurationType">
+      <module name="RevPasswordManager-backend" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration default="true" type="KotlinStandaloneScriptRunConfigurationType">
+      <module name="notification-service" />
+      <option name="filePath" />
+      <method v="2" />
+    </configuration>
+  </component>
   <component name="SharedIndexes">
     <attachedChunks>
       <set>
